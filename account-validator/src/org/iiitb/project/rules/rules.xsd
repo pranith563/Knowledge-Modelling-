@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:sample="http://www.iiitb.ac.in/RULES"
+	targetNamespace="http://www.iiitb.ac.in/RULES"	elementFormDefault="qualified">
+
+<element name = "RuleBase">
+	<complexType>
+		<sequence>
+			<element name = "RULE" minOccurs = "1" maxOccurs = "unbounded">
+				<complexType>
+					<sequence>
+						<choice>
+							<element ref="sample:CONDITION"/>
+							<element name="AND">
+								<complexType>
+									<sequence>
+										<element ref="sample:CONDITION" minOccurs="2" maxOccurs="unbounded"/>
+									</sequence>
+								</complexType>
+							</element> 
+							<element name="OR">
+								<complexType>
+									<sequence>
+										<element ref="sample:CONDITION" minOccurs="2" maxOccurs="unbounded"/>
+									</sequence>
+								</complexType>
+							</element>
+						</choice>	
+						<element name="ActionList">
+							<complexType>
+								<sequence>
+									<element ref="sample:action" minOccurs="1" maxOccurs="unbounded"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+					 <attribute name = "rule_name" type = "string"/> 
+				</complexType>
+			</element>			
+		</sequence>
+	</complexType>
+</element>
+
+<element name = "action" type="string"/>
+<element name = "CONDITION">
+	<complexType>
+		<sequence>
+			<element  name = "table"/>
+			<element name = "column"/>
+			<element name = "operator"/>
+			<element ref = "sample:value"/>
+		</sequence>
+	</complexType>
+</element>
+
+<element name= "value">
+	<complexType>
+		<choice>
+			<element name = "ind" type = "string"/>
+			<element name = "ref">
+				<complexType>
+					<sequence>
+					<element name = "table"/>
+					<element name = "column"/>
+					<element name= "join_key"/>
+					</sequence>
+				</complexType>
+			</element>
+		</choice>
+	</complexType>
+</element>
+</schema>

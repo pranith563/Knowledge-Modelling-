@@ -1,0 +1,17 @@
+Rules for account opening(saving bank account):-
+
+- If an account already exists for the customer then reject.
+- If age < 10 then reject.
+- If any of the personal details are NULL then reject   (OR LOGIC)
+- If given address doesnt match with that of address specified in Aadhaar then reject.
+- If proof of identity not given then reject.
+- If personal detail doesnt match with aadhaar details then reject.
+
+
+Rules for Loan approval :-(Property Loan)
+
+- If CIBIL score < 300 thn reject.
+- If Debt-over-income-ratio > 43% then reject.
+- If Loan-to-Value < 80% then reject. (Loan taken to the property).
+- If address proof not given then reject.
+- If proof of employment (salary slips or income certificate) not given then reject.

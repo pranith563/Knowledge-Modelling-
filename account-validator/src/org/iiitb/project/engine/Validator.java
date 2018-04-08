@@ -617,11 +617,9 @@ void acceptForm(int id) {
 			}
 			
 			else {
-				System.out.println("Innnnn rulewise ");
+				//System.out.println("Innnnn rulewise ");
 				validateForm_rule(table);
 				
 			}
-			
 		}
-	
 }

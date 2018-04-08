@@ -45,7 +45,7 @@ public class Account extends HttpServlet{
    
     Customer c = new Customer(name,fname,mname,DOB,gender,Nationality,pan_no,aadhaar,address,city,pin,mobile);
     
-    DatabaseConnection m=new DatabaseConnection("bankdb","root","1589");
+    DatabaseConnection m=new DatabaseConnection("bankdb","root","sravya");
  	java.sql.PreparedStatement preparedStatement=null;
     try{
     int age=calculate_Age(DOB);

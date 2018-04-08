@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loan Approval</title>
+<style>
+input[type=text], select {
+    width: 49%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+
+label{
+    margin: 0 0;
+    display: inline-block;
+}
+
+h2{
+	margin: 8px 0;
+    display: inline-block;
+    width : 49%;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+h3{
+	border-bottom : 1px solid #57c4d0;
+}
+</style>
+</head>
+<body>
+
+<h2>Request</h2>
+<h2>Response</h2>
+
+<div style : "display:inline-block;">
+<div id="rcorners2" style = "width:590px;height:550px;border-
+radius:5px;background-color: #f2f2f2;display : inline-block;">
+
+<h3>Borrower</h3>
+
+<form action="/action_page.php">
+	<label style="width:100%;" for="name">Name</label>
+	<input type="text" id = "name" name = "Name" style = "width:100%;">
+	
+	<label style="width:49%;" for="credit_score">Credit Score</label>
+    <label style="width:49%;" for="yearly_icome">Yearly Income</label>
+    <input type="text" id="credit_score" name="Credit Score">
+
+    <input type="text" id="yearly_income" name="Yearly Income">
+   
+   <h3>Loan</h3>
+   
+    <label style="width:49%;" for="amount">Amount</label>
+    <label style="width:49%;" for="duration">Duration</label>
+    <input type="text" id="amount" name="Amount">
+
+    <input type="text" id="duration" name="Duration">
+    
+   	<label style="width:49%;" for="yinterest_rate">Yearly Interest Rate</label>
+    <label style="width:49%;" for="yrpayment">Yearly Repayment</label>
+    <input type="text" id="yinterest_rate" name="Interest">
+
+    <input type="text" id="yrpayment" name="Repayment"> 
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="rcorners2" style = "width:590px;height:550px;border-
+radius:5px;background-color: #f2f2f2;display : inline-block;">
+
+<h3>Loan</h3>
+
+<form action="/action_page.php">
+	<!--<label style="width:100%;" for="name">Name</label>
+	<input type="text" id = "name" name = "Name" style = "width:100%;">
+	
+	<label style="width:49%;" for="credit_score">Credit Score</label>
+    <label style="width:49%;" for="yearly_icome">Yearly Income</label>
+    <input type="text" id="credit_score" name="Credit Score">
+
+    <input type="text" id="yearly_income" name="Yearly Income-->
+    <label style="width:49%;" for="amount">Amount</label>
+    <label style="width:49%;" for="duration">Duration</label>
+    <input type="text" id="amount" name="Amount">
+
+    <input type="text" id="duration" name="Duration">
+    
+   <label style="width:49%;" for="yinterest_rate">Yearly Interest Rate</label>
+    <label style="width:49%;" for="yrpayment">Yearly Repayment</label>
+    <input type="text" id="yinterest_rate" name="Interest">
+
+    <input type="text" id="yrpayment" name="Repayment"> 
+
+    <input type="checkbox">
+    <label>Approved</label>
+    
+    <h3>Messages</h3>
+   	<!--<label style = "width : 100%;" for= "message1">MessageList</label>-->
+   	<input type="text" name="message1" style = "width:100%;">
+	<input type="text" name="message2" style = "width:100%">
+	<label style = "width : 100%;" for= "approval">Approval Status</label>
+	
+    <input type="text" style = "width:100%" id="approval" name="approval_status">
+  </form>
+</div>
+</div>
+
+</body>
+</html>

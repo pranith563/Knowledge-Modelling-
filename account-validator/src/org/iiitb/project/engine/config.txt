@@ -1,5 +1,5 @@
 user:root
-password:1589
+password:sravya
 database:bankdb
 table:Customer
 rulesFile:src/org/iiitb/project/rules/rules.xml
